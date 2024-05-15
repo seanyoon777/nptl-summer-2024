@@ -1,3 +1,22 @@
 TODO: 
 - Summary functions 
-- 'full' giving weird dictionary key is problematic. 
+
+
+EXPERIMENT LISTS / WORK LOG
+
+240515: 
+    exp1: 
+        Verifying NeuralProcessor code, using VerifyFeatureExtractor.py
+        Chevyshev lowpass 6000 -> downsample by 2 -> Butterworth bandpass 250-4900 -> LRR used 
+        LRR weights obtained and denoised from diagnostic block before threshold extraction 
+        thresholds extracted from diagnostic block using std 
+        Outputs: 
+            out1: '/oak/stanford/groups/henderj/braingate/t12/t12.2022.08.13/Data/_NSP1/NSP Data/0_neuralProcess_Complete_bld(000)001.ns5' as diagnostic file, 
+                  '/oak/stanford/groups/henderj/braingate/t12/t12.2022.08.13/Data/_NSP2/NSP Data/0_neuralProcess_Complete_bld(000).ns5' as trial block 
+            out2: '/oak/stanford/groups/henderj/braingate/t12/t12.2022.08.13/Data/_NSP1/NSP Data/0_neuralProcess_Complete_bld(000)001.ns5' as diagnostic file, 
+                  '/oak/stanford/groups/henderj/braingate/t12/t12.2022.08.13/Data/_NSP2/NSP Data/1_neuralProcess_Complete_bld(001).ns5' as trial block 
+240511: 
+    All experiments ran on CrossCorrelate.ipynb. Cross-correlation with MATLAB file to check trial start time offset. 
+
+Before: 
+    Grinding on NeuralProcessor (highly optimized)

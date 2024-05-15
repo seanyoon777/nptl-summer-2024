@@ -46,3 +46,6 @@ Archive/*
 
 # Matlab
 *.asv
+
+/Results
+*/Results

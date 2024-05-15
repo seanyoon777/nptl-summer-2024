@@ -193,7 +193,7 @@ class NeuralProcessor:
             out          : dictionary containing extracted features, each following [samples x channels]
         """
         
-        # internal logic for numbering each feature extraction step – it's good to have this for debugging purposes
+        # internal logic for numbering each feature extraction step -- it's good to have this for debugging purposes
         features_num = np.sum([True, 
                                len(self.TCCExtractor.multipliers) > 0, 
                                len(self.SBPExtractor.freq_bands) > 0, 
@@ -239,28 +239,24 @@ class NeuralProcessor:
 
     
     def _print_process(self, process): 
+        """Returns output logs when verbose=True"""
         if isinstance(process, ReReferenceFilter): 
             if process.method.lower() == "lrr": 
                 return f"linear regression reference (LRR) filtered"
             elif process.method.lower() == "car": 
                 return f"common average reference (CAR) filtered"
+            
         elif isinstance(process, Downsampler): 
             return f"downsampled by factor of {process.ds_factor}"
+        
         elif isinstance(process, ChevyshevFilter): 
             return f"{process.filt_type} filtered (Chevyshev type I) for Wn={process.Wn}Hz"
+        
         elif isinstance(process, ButterworthFilter): 
             return f"{process.filt_type} filtered (Butterworth) for Wn={process.Wn}Hz"
         
 
-    def summary(table_width=70): 
-        """
-        Produces a summary of the NeuralProcessor
-        Args: 
-        
-        """
-        # logic for setting table width and checking whether parameters are valid
-
-
+    
     def summary(self, table_width=70): 
         """
         Produces a summary of the LMPExtractor class object
@@ -757,7 +753,7 @@ class LMPExtractor:
             fs       : sampling frequency of neural data
         """
         self.boxsizes = boxsizes 
-        # if boxsizes is given as a single integer – this is for user convenience
+        # if boxsizes is given as a single integer -- this is for user convenience
         if not isinstance(boxsizes, list): 
             self.boxsizes = [boxsizes]
         self.fs = 0
@@ -859,7 +855,7 @@ class ThresholdCrossingExtractor:
             shift_size  : size of the shift between bins in ms
         """
         self.multipliers = multipliers
-        # contain input multiplier in list if it is single number – this is for user convenience
+        # contain input multiplier in list if it is single number -- this is for user convenience
         if not isinstance(multipliers, list): 
             self.multipliers = [multipliers]
             
