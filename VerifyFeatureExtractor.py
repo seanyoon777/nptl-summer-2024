@@ -7,6 +7,7 @@ diagnostic_NSP1_filename = ''
 diagnostic_NSP2_filename = '/oak/stanford/groups/henderj/braingate/t12/t12.2022.08.13/Data/_NSP2/NSP Data/0_neuralProcess_Complete_bld(000).ns5'
 block_NSP1_filename = ''
 block_NSP2_filename = ''
+save_path
 
 def main():
     # load diagnostic blocks
