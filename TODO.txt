@@ -1,0 +1,5 @@
+TODO: 
+- Allow user to use another block for LRR 
+    --> could use LRR functions? but yea it would definitely be better if one could specify a data block for retreiving coefficients when initializing the object
+- Summary functions 
+- 'full' giving weird dictionary key is problematic. 
